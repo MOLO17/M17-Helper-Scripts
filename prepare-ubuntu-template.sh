@@ -9,6 +9,9 @@ sudo apt dist-upgrade -y
 sudo apt install qemu-guest-agent -y
 sudo systemctl enable qemu-guest-agent
 
+sudo aa-remove-unknown
+sudo apt-get purge --auto-remove apparmor
+
 sudo touch /etc/cloud/cloud-init.disabled
 
 sudo truncate -s 0 /etc/machine-id

@@ -16,6 +16,8 @@ sudo touch /etc/cloud/cloud-init.disabled
 
 sudo truncate -s 0 /etc/machine-id
 
+sudo rm /etc/gitlab-runner/.runner_system_id
+
 sudo echo '[Unit]
 Description=Regenerate SSH host keys
 Before=ssh.service
